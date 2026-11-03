@@ -2,12 +2,13 @@
 using Microsoft.AspNetCore.Mvc;
 using Shared.Models.Auth;
 using Shared.Models;
+using consts = Shared.Constants.Constants;
 
 namespace Bakalarska_prace_Server.Controllers.AuthController
 
 {
     [ApiController]
-    [Route("auth")]
+    [Route("Auth")]
     public class AuthController : ControllerBase
     {
         [HttpPost("register")]

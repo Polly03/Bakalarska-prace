@@ -6,12 +6,17 @@ namespace Bakalarska_prace_Server
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // 1. Zaregistrujeme podporu pro API kontrolory
+            builder.Services.AddControllers();
             builder.Services.AddSignalR();
 
             var app = builder.Build();
 
+            app.MapControllers();
+
+
             Console.WriteLine("Server startuje podle konfigurace...");
-            app.Run(); // Automaticky si naète port z Kestrel konfigurace nebo appsettings
+            app.Run();
         }
     }
 }

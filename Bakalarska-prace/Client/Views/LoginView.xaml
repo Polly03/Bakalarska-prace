@@ -1,12 +1,43 @@
 ﻿<UserControl x:Class="Bakalarska_prace.Views.LoginView"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Height="720" Width="1280">
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Height="720" Width="1280">
     <Grid>
-        <TextBox x:Name="Name" Margin="372,245,372,412" Text="test" FontSize="36"/>
-        <TextBox x:Name="Password" Margin="372,161,372,496" Text="test" FontSize="36"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <!-- 0: Horní pružná mezera (můžeš změnit na pevnou výšku, např. Height="100") -->
 
-        <Button Margin="488,352,488,304" FontSize="30" Click="Login_Click">přihlásit</Button>
-        <Button Margin="488,454,488,202" FontSize="30" Click="NewUser_Click">Vytvořit účet</Button>
+            <RowDefinition Height="Auto"/>
+            <!-- 1: Popisek Login -->
+            <RowDefinition Height="Auto"/>
+            <!-- 2: Input Login -->
+            <RowDefinition Height="20"/>
+            <!-- 3: Meziprostor -->
+            <RowDefinition Height="Auto"/>
+            <!-- 4: Popisek Heslo -->
+            <RowDefinition Height="Auto"/>
+            <!-- 5: Input Heslo -->
+            <RowDefinition Height="40"/>
+            <!-- 6: Meziprostor -->
+            <RowDefinition Height="Auto"/>
+            <!-- 7: Tlačítko Přihlásit -->
+            <RowDefinition Height="15"/>
+            <!-- 8: Meziprostor -->
+            <RowDefinition Height="Auto"/>
+            <!-- 9: Tlačítko Vytvořit účet -->
+
+            <RowDefinition Height="*"/>
+            <!-- 10: Dolní pružná mezera -->
+        </Grid.RowDefinitions>
+
+        <!-- Prvky posunuté o +1 index kvůli novému řádku nahoře -->
+        <Label Height="75" x:Name="label_Login" Grid.Row="1" FontSize="25" HorizontalAlignment="Center">Zadejte přezdívku nebo email:</Label>
+        <TextBox Height="75" x:Name="txtBox_Login" Grid.Row="2" FontSize="36" Width="500" Margin="0,5,0,0"/>
+
+        <Label Height="75" x:Name="label_Password" Grid.Row="4" FontSize="25" HorizontalAlignment="Center">Zadejte heslo:</Label>
+        <TextBox Height="75" x:Name="txtBox_Password" Grid.Row="5" FontSize="36" Width="500" Margin="0,5,0,0"/>
+
+        <Button Height="75" Grid.Row="7" FontSize="30" Width="300" Click="Login_Click">přihlásit</Button>
+        <Button Height="75" Grid.Row="9" FontSize="30" Width="300" Click="NewUser_Click">Vytvořit účet</Button>
     </Grid>
 </UserControl>

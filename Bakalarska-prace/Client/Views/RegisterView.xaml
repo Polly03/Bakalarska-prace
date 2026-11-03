@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="Bakalarska_prace.Views.RegisterView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Height="720" Width="1280">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <!-- 0: Horní pružná mezera -->
+
+            <RowDefinition Height="Auto"/>
+            <!-- 1: Popisek Jméno -->
+            <RowDefinition Height="Auto"/>
+            <!-- 2: Input Jméno -->
+            <RowDefinition Height="15"/>
+            <!-- 3: Meziprostor -->
+
+            <RowDefinition Height="Auto"/>
+            <!-- 4: Popisek Email -->
+            <RowDefinition Height="Auto"/>
+            <!-- 5: Input Email -->
+            <RowDefinition Height="15"/>
+            <!-- 6: Meziprostor -->
+
+            <RowDefinition Height="Auto"/>
+            <!-- 7: Popisek Heslo -->
+            <RowDefinition Height="Auto"/>
+            <!-- 8: Input Heslo -->
+            <RowDefinition Height="15"/>
+            <!-- 9: Meziprostor -->
+
+            <RowDefinition Height="Auto"/>
+            <!-- 10: Popisek Heslo znovu -->
+            <RowDefinition Height="Auto"/>
+            <!-- 11: Input Heslo znovu -->
+            <RowDefinition Height="30"/>
+            <!-- 12: Meziprostor -->
+
+            <RowDefinition Height="Auto"/>
+            <!-- 13: Tlačítko Registrovat / Potvrdit -->
+            <RowDefinition Height="15"/>
+            <!-- 14: Meziprostor -->
+
+            <RowDefinition Height="Auto"/>
+            <!-- 15: Tlačítko Zpět -->
+
+            <RowDefinition Height="*"/>
+            <!-- 16: Dolní pružná mezera -->
+        </Grid.RowDefinitions>
+
+        <!-- 1. Jméno -->
+        <Label Height="40" x:Name="label_Username" Grid.Row="1" FontSize="20" HorizontalAlignment="Center">Zadejte uživatelské jméno:</Label>
+        <TextBox Height="50" x:Name="txtBox_Username" Grid.Row="2" FontSize="28" Width="500"/>
+
+        <!-- 2. Email -->
+        <Label Height="40" x:Name="label_Email" Grid.Row="4" FontSize="20" HorizontalAlignment="Center">Zadejte email:</Label>
+        <TextBox Height="50" x:Name="txtBox_Email" Grid.Row="5" FontSize="28" Width="500"/>
+
+        <!-- 3. Heslo -->
+        <Label Height="40" x:Name="label_Password" Grid.Row="7" FontSize="20" HorizontalAlignment="Center">Zadejte heslo:</Label>
+        <TextBox Height="50" x:Name="txtBox_Password" Grid.Row="8" FontSize="28" Width="500"/>
+
+        <!-- 4. Heslo znovu -->
+        <Label Height="40" x:Name="label_PasswordConfirm" Grid.Row="10" FontSize="20" HorizontalAlignment="Center">Zadejte heslo znovu:</Label>
+        <TextBox Height="50" x:Name="txtBox_PasswordConfirm" Grid.Row="11" FontSize="28" Width="500"/>
+
+        <!-- Akční tlačítka -->
+        <Button Height="60" Grid.Row="13" FontSize="26" Width="300" Click="Register_Click">Registrovat</Button>
+        <Button HorizontalAlignment="Left" Margin="50,0,0,0" Height="60" Grid.Row="15" FontSize="26" Width="300" Click="ReturnToLogin_Click">Zpět na přihlášení</Button>
+    </Grid>
+</UserControl>
